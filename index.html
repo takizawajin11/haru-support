@@ -1,4 +1,4 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style><title>瀧澤晴 ご支援窓口</title>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow,noarchive"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style><title>瀧澤晴 ご支援窓口</title>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=BIZ+UDPMincho:wght@400;700&display=swap">
 <style>
@@ -233,10 +233,10 @@ footer{font-size:.95rem;color:var(--muted);border-top:1px solid var(--line);padd
 
   <section class="contact" aria-labelledby="c-h">
     <h2 id="c-h">お申込み・お問い合わせ</h2>
-    <div class="mail" id="mail">takizawajin@gmail.com</div>
+    <div class="mail" id="mail" data-u="takizawajin" data-d="gmail.com">アドレスを表示しています…</div>
     <div class="btns">
       <button class="btn" id="copy" type="button">アドレスをコピー</button>
-      <a class="btn" href="mailto:takizawajin@gmail.com?subject=%E7%80%A7%E6%BE%A4%E6%99%B4%E3%81%B8%E3%81%AE%E3%81%94%E6%94%AF%E6%8F%B4%E3%81%AE%E7%94%B3%E8%BE%BC%E3%81%BF" target="_blank" rel="noopener">メールを書く</a>
+      <a class="btn" id="mailbtn" href="#" target="_blank" rel="noopener">メールを書く</a>
     </div>
     <div class="status" id="status" aria-live="polite"></div>
   </section>
@@ -255,6 +255,8 @@ footer{font-size:.95rem;color:var(--muted);border-top:1px solid var(--line);padd
 </main>
 
 <script>
+(function(){var m=document.getElementById('mail');var a=m.dataset.u+'\u0040'+m.dataset.d;m.textContent=a;
+var b=document.getElementById('mailbtn');b.href='mai'+'lto:'+a+'?subject='+encodeURIComponent('瀧澤晴へのご支援の申込み');})();
 document.getElementById('copy').addEventListener('click',async()=>{
   const s=document.getElementById('status'), m=document.getElementById('mail');
   try{await navigator.clipboard.writeText(m.textContent.trim());s.textContent='アドレスをコピーしました。';}
