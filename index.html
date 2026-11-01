@@ -102,9 +102,13 @@ footer{font-size:.95rem;color:var(--muted);border-top:1px solid var(--line);padd
 .concert .prog{list-style:none;margin:0;padding:0;font-family:var(--serif);font-size:1.05rem;line-height:1.7}
 .concert .invite{font-size:1.05rem}
 .concert .map{align-self:flex-start;font-size:.95rem}
+.langs{display:flex;justify-content:flex-end;gap:6px;flex-wrap:wrap;font-size:.95rem}
+.langs a{padding:6px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--teal);background:var(--card)}
+.langs a[aria-current]{background:var(--teal);color:var(--on-teal);border-color:var(--teal)}
 </style>
 
 </head><body><main class="wrap">
+  <nav class="langs" aria-label="Language"><a href="index.html" lang="ja" aria-current="page">日本語</a><a href="en.html" lang="en">English</a><a href="fr.html" lang="fr">Français</a></nav>
   <header class="hero">
     <div>
       <div class="motto">音楽を、読み、考え、体験し、伝える。</div>
